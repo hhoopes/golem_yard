@@ -1,0 +1,19 @@
+<h1></h1>
+</div>
+</div>
+
+<div class="row well-sm">
+<div class="col-med-4">
+  <ul>
+    <% @robots.each do |robot| %>
+    <li><a href="/robots/<%= robot.name %>"><%= robot.name %></a>
+      <br/><%= robot.city %>
+      <br/><%= robot.state %>
+      <br/><%= robot.birthday %>
+      <br/><%= robot.date_hired %>
+      <br/><%= robot.department %>
+    <% end %>
+  </ul>
+</div>
+</div>
+</div>

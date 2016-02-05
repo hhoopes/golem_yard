@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="/bootstrap.css">
+  <link rel="stylesheet" href="/application.css">
+  <link href='https://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'></head>
+<body>
+  <div class="container">
+
+    <nav class='navbar navbar-default navbar-fixed-top navcustom'>
+      <div class='container navcustom'>
+      <a href='/' class='navbar-brand navcustom'>Golem Yard</a>
+      <ul class='nav navbar-nav navcustom'>
+        <li><a href="/robots">All Robots</a></li>
+        <li><a href="/robots/new">New Robot</a></li>
+      </ul>
+    </div>
+    </nav>
+
+    <div class='container'>
+      <div class='row well-sm'>
+        <div class='col-md-12 text-center'>
+    <%= yield %>
+  </div>
+</body>
+</html>
