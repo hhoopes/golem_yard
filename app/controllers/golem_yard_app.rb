@@ -27,7 +27,7 @@ class GolemYardApp < Sinatra::Base
     erb :edit
   end
 
-  put '/robots:id' do |id|
+  put '/robots/:id' do |id|
     golem_yard.update(params[:robot], id.to_i)
     redirect "/robots/#{id}"
   end

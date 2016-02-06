@@ -1,23 +1,23 @@
 require_relative '../test_helper'
 
-class UserCanEditAnExistingTask < FeatureTest
-  def test_existing_task_is_updated_with_new_information
-    task_manager.create({ title: 'Original Title',
-                         description: 'Original Description' })
+class UserCanEditAnExistingRobot < FeatureTest
+  def test_existing_robot_is_updated_with_new_information
+    golem_yard.create({ name: "Bob",
+                        city: "Detroit"})
 
-    id = task_manager.all.last.id
-    visit "/tasks/#{id}/edit"
+    id = golem_yard.all.last.id
+    visit "/robots/#{id}/edit"
 
-    fill_in 'task[title]', with: 'Updated Title'
-    fill_in 'task[description]', with: 'Updated Description'
+    fill_in 'robot[name]', with: 'Updated Name'
+    fill_in 'robot[city]', with: 'Updated City'
     click_button 'Submit'
 
-    assert_equal "/tasks/#{id}", current_path
-    within 'h2' do
-      assert page.has_content? 'Updated Title'
+    assert_equal "/robots/#{id}", current_path
+    within 'h1' do
+      assert page.has_content? 'Updated Name'
     end
     within 'p' do
-      assert page.has_content? 'Updated Description'
+      assert page.has_content? 'Updated City'
     end
   end
 end
