@@ -45,7 +45,7 @@ class GolemYardApp < Sinatra::Base
     if ENV["RACK_ENV"] == "test"
       database = Sequel.sqlite("db/golem_yard_test.sqlite3")
     else
-      database = Sequel.sqlite("db/golem_yard_dev.sqlite3")
+      database = Sequel.sqlite("db/golem_yard_development.sqlite3")
     end
     @golem_yard ||= GolemYard.new(database)
   end

@@ -11,6 +11,7 @@ class GolemYard
   end
 
   def all
+    # binding.pry
     database.from(:robots).to_a.map { |data| Robot.new(data)}
   end
 
@@ -20,7 +21,7 @@ class GolemYard
   end
 
   def update(robot, id) #adjust for all the characteristics
-    database.from(:robots).where(:id => id).update(:name => robot[:name], :city => robot[:city])
+    database.from(:robots).where(:id => id).update(robot)
   end
 
   def delete(id)

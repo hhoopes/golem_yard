@@ -1,9 +1,15 @@
 <div>
   <h1 id="robot"><%= @robot.name %></h1>
-  <p><%= @robot.city %></p>
-  <A HREF ="/robots/<%= @robot.id %>/edit">Edit</A>
-  <form action="/robots/<%= @robot.id %>" method="post">
+  <p><img src="<%= @robot.avatar %>"><p>
+  <br/>City: <%= @robot.city %>
+  <br/>State: <%= @robot.state %>
+  <br/>Birthday: <%= @robot.birthdate %>
+  <br/>Date Hired:<%= @robot.date_hired %>
+  <br/>Department: <%= @robot.department %>
+
+  <p><A HREF ="/robots/<%= @robot.id %>/edit">Edit</A><p>
+  <p><form action="/robots/<%= @robot.id %>" method="post">
     <input type="hidden"  name="_method" value="delete">
     <input type="submit" value="Delete">
-  </form>
+  </form></p>
 </div>

@@ -1,9 +1,9 @@
 <form action="/robots/<%= @robot.id %>" method="post">
   <input type="hidden" name="_method" value="put">
-  <h1>Update that robot!</h1>
-  <h2>Robot:</h2>
-  <input type='text' name='robot[name]' value="<%= @robot.name %>"/>
-  <h2>City:</h2>
-  <textarea name='robot[city]' rows='20' columns='40'><%= @robot.city %></textarea>
+  <h1>Edit characteristics for <% @robot.name %></h1>
+  <% @robot.data.keys.each do |key| %>
+    <% next if key == :id || key == :avatar %>
+    <p><input type='text' name="robot[<%= key.to_s %>]" value="<%= @robot.data.fetch key %>"/></p>
+  <% end %>
   <input class="btn btn-primary" type='submit' value="Submit"/>
 </form>
