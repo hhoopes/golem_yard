@@ -16,6 +16,12 @@
   height: 85vh;
 }
 
+a  {
+  color: #FFFFFF;
+}
+a:hover {
+  color: #DD1C1A;
+}
 #greeting {
   color: #FFFFFF;
   padding: 15px;
@@ -26,4 +32,8 @@ body {
   font-family: "Cabin", Verdana, sans-serif;
   font-size: large;
   background-image: url("/images/16664523-Cartoon-machines-seamless-background--Stock-Vector-robot.jpg");
+}
+
+input {
+  color: #000000;
 }
