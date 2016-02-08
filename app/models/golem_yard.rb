@@ -6,12 +6,10 @@ class GolemYard
   end
 
   def create(robot)
-    #name, city, state, avatar, birthdate, date hired, and department
     database.from(:robots).insert(robot)
   end
 
   def all
-    # binding.pry
     database.from(:robots).to_a.map { |data| Robot.new(data)}
   end
 
@@ -26,5 +24,10 @@ class GolemYard
 
   def delete(id)
     database.from(:robots).where(:id => id).delete
+  end
+
+  def sample
+    id = database[:robots].first.fetch :id
+    find(id)
   end
 end

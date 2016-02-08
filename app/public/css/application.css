@@ -1,0 +1,29 @@
+.navcustom {
+  background-color: rgba(232, 170, 20, 0.75);
+  color: #000000;
+  font-size: large;
+
+}
+
+.robots {
+  background-color: rgba(65, 73, 76, 0.97);
+  padding: 15px;
+  color: #FFFFFF;
+}
+
+.dashboard {
+  inline;
+  height: 85vh;
+}
+
+#greeting {
+  color: #FFFFFF;
+  padding: 15px;
+}
+
+body {
+  padding-top: 90px;
+  font-family: "Cabin", Verdana, sans-serif;
+  font-size: large;
+  background-image: url("/images/16664523-Cartoon-machines-seamless-background--Stock-Vector-robot.jpg");
+}

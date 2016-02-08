@@ -1,13 +1,22 @@
-<h1>Add a new robot to the yard</h1>
+<div class="row well robots">
+  <h1 class="robots" id="greeting">Add a New Robot to Golem Yard</h1>
 </div>
+<div class="row well robots">
+  <form action="/robots" method="post">
+  <table>
+    <tr><td>Name:</td>
+    <td><input type='text' name = 'robot[name]'/></td></tr>
+    <tr><td>City:</td>
+    <td><input type='text' name = 'robot[city]'/></td></tr>
+    <tr><td>State:</td>
+    <td><input type='text' name = 'robot[state]'/></td></tr>
+    <tr><td>Birthday:</td>
+    <td><input type='text' name = 'robot[birthdate]'/></td></tr>
+    <tr><td>Date Hired:</td>
+    <td><input type='text' name = 'robot[date_hired]'/></td></tr>
+    <tr><td>Department:</td>
+    <td><input type='text' name = 'robot[department]'/></td></tr>
+  </table>
+    <input class="btn btn-primary" type='submit' value="Submit"/><p>
+      </form>
 </div>
-
-<form action="/robots" method="post">
-<p>Name: <input type='text' name = 'robot[name]'/></p>
-<p>City: <input type='text' name = 'robot[city]'/></p>
-<p>State: <input type='text' name = 'robot[state]'/></p>
-<p>Birthday: <input type='text' name = 'robot[birthdate]'/></p>
-<p>Date Hired: <input type='text' name = 'robot[date_hired]'/></p>
-<p>Department: <input type='text' name = 'robot[department]'/></p>
-<p><input type='submit' value="Submit"/><p>
-</form>

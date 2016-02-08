@@ -1,5 +1,6 @@
 class GolemYardApp < Sinatra::Base
   get '/' do
+    @robot = golem_yard.sample
     erb :dashboard
   end
 
@@ -34,6 +35,10 @@ class GolemYardApp < Sinatra::Base
 
   delete '/robots/:id' do |id|
     golem_yard.delete(id.to_i)
+    redirect '/robots'
+  end
+
+  get '/statistics' do
     redirect '/robots'
   end
 

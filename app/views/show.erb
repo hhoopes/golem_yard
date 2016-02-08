@@ -1,15 +1,22 @@
-<div>
-  <h1 id="robot"><%= @robot.name %></h1>
-  <p><img src="<%= @robot.avatar %>"><p>
-  <br/>City: <%= @robot.city %>
-  <br/>State: <%= @robot.state %>
-  <br/>Birthday: <%= @robot.birthdate %>
-  <br/>Date Hired:<%= @robot.date_hired %>
-  <br/>Department: <%= @robot.department %>
+<div class="row well robots">
+  <div class="col-md-12">
+    <h1 id="greeting">Viewing Robot <%= @robot.name %></h1>
+  </div>
+</div>
 
-  <p><A HREF ="/robots/<%= @robot.id %>/edit">Edit</A><p>
-  <p><form action="/robots/<%= @robot.id %>" method="post">
+<div class="row well robots dashboard">
+  <div class="col-md-4">
+    <p><img src="<%= @robot.avatar %>"><p>
+    <br/>City: <%= @robot.city %>
+    <br/>State: <%= @robot.state %>
+    <br/>Birthday: <%= @robot.birthdate %>
+    <br/>Date Hired:<%= @robot.date_hired %>
+    <br/>Department: <%= @robot.department %>
+
+    <p><A HREF ="/robots/<%= @robot.id %>/edit" class="btn btn-primary">Edit</A>
+    <p><form action="/robots/<%= @robot.id %>" method="post">
     <input type="hidden"  name="_method" value="delete">
-    <input type="submit" value="Delete">
-  </form></p>
+      <input type="submit" value="Delete" class="btn btn-primary">
+    </form></p>
+  </div>
 </div>

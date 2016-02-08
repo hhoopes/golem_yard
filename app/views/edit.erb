@@ -1,9 +1,20 @@
 <form action="/robots/<%= @robot.id %>" method="post">
   <input type="hidden" name="_method" value="put">
-  <h1>Edit characteristics for <% @robot.name %></h1>
-  <% @robot.data.keys.each do |key| %>
-    <% next if key == :id || key == :avatar %>
-    <p><input type='text' name="robot[<%= key.to_s %>]" value="<%= @robot.data.fetch key %>"/></p>
-  <% end %>
-  <input class="btn btn-primary" type='submit' value="Submit"/>
-</form>
+  <div class="row well robots">
+    <h1 class="robots" id="greeting">Edit Characteristics for Robot <%= @robot.name %></h1>
+  </div>
+  <div class="row well robots">
+    <div class="col-offset-4-md-6">
+      <table>
+        <% @robot.data.keys.each do |key| %>
+          <tr>
+          <% next if key == :id || key == :avatar %>
+            <td><%= key.capitalize %>:<td>
+            <td><input type='text' name="robot[<%= key.to_s %>]" value="<%= @robot.data.fetch key %>"/></p>
+          </td></tr>
+        <% end %>
+      </table>
+      <input class="btn btn-primary" type='submit' value="Submit"/>
+      </form>
+  </div>
+</div>
