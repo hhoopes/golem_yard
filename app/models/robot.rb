@@ -13,7 +13,7 @@ class Robot
     @data       = data
     @id         = data[:id]
     @name       = data[:name]
-    @city       = data[:city].capitalize
+    @city       = data[:city]
     @state      = data[:state].capitalize
     @birthdate  = data[:birthdate]
     @date_hired = data[:date_hired]
