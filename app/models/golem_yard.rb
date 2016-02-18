@@ -27,7 +27,7 @@ class GolemYard
   end
 
   def sample
-    id = database[:robots].first.fetch :id
-    find(id)
+    id = database[:robots].all.last.fetch :id
+    find(id) unless id.nil?
   end
 end

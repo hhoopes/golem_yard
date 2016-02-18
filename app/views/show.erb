@@ -1,6 +1,6 @@
 <div class="row well robots">
   <div class="col-md-12">
-    <h1 id="greeting">Viewing Robot <%= @robot.name %></h1>
+    <h1 id="greeting">Viewing: <%= @robot.name %></h1>
   </div>
 </div>
 
@@ -8,9 +8,6 @@
   <div class="col-md-4">
     <p><img src="<%= @robot.avatar %>"><p>
     <br/>City: <%= @robot.city %>
-    <br/>State: <%= @robot.state %>
-    <br/>Birthday: <%= @robot.birthdate %>
-    <br/>Date Hired:<%= @robot.date_hired %>
     <br/>Department: <%= @robot.department %>
 
     <p><A HREF ="/robots/<%= @robot.id %>/edit" class="btn btn-primary">Edit</A>

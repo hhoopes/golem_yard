@@ -2,9 +2,6 @@ class Robot
   attr_reader :id,
               :name,
               :city,
-              :state,
-              :birthdate,
-              :date_hired,
               :department,
               :avatar,
               :data
@@ -14,9 +11,6 @@ class Robot
     @id         = data[:id]
     @name       = data[:name]
     @city       = data[:city]
-    @state      = data[:state].capitalize
-    @birthdate  = data[:birthdate]
-    @date_hired = data[:date_hired]
     @department = data[:department].capitalize
     @avatar     = generate_avatar
   end

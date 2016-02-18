@@ -1,6 +1,6 @@
 class GolemYardApp < Sinatra::Base
   get '/' do
-    @robot = golem_yard.sample
+    @robot = golem_yard.sample unless golem_yard.database[:robots].empty?
     erb :dashboard
   end
 

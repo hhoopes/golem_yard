@@ -1,16 +1,20 @@
 <div class="row well robots">
-    <h1 id="greeting" class="robots">
+    <h1 id="greeting" class="robots col-md-offset-1">
       Welcome to the Golem Yard!</h1>
 </div>
 
-<div class="row well robots dashboard">
-  <div class="col-offset-2 col-md-4">
-    <h2>Featured Robot<h2>
-    <p><img src="<%= @robot.avatar %>"><p>
-    <h3><%= @robot.name %></h3>
+<div class="dashboard row well robots">
+  <div class ="row">
+    <div class="col-md-offset-1 col-md-4">
+      <% unless @robot.nil? %>
+    <h2>Featured Robot</h2>
+
+    <p><%= @robot.name %></p>
     <p>Department: <%= @robot.department %></p>
+    <p><img src="<%= @robot.avatar %>"><p>
+    <% end %>
   </div>
-  <div class="col-md-6">
+  <div class="col-md-7">
     <h2>About Us</h2>
     <p>Golem Yard is a small nonprofit organization devoted to to rehabilitation
     of robots that have otherwise been discarded by society as "dangerous",
@@ -20,6 +24,13 @@
 
     <p>Your donation to the Golem Yard is tax-deductible and includes postcards
       from the robot you sponsor.
-      <i class="glyphicon glyphicon-star-empty"></i></p>
+
   </div>
+</div>
+<div class="col-md-offset-5 rrobots">
+    <p><i class="glyphicon glyphicon-star-empty"></i>
+    <i class="glyphicon glyphicon-star-empty"></i>
+    <i class="glyphicon glyphicon-star-empty"></i>
+    <i class="glyphicon glyphicon-star-empty"></i>
+    <i class="glyphicon glyphicon-star-empty"></i></p>
 </div>

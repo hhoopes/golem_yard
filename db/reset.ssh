@@ -1,0 +1,8 @@
+#! /bin/bash
+echo "running drop"
+ruby db/drop.rb
+echo "migration 1"
+ruby db/migrate/001_create_robots.rb
+echo "migration 2"
+ruby db/migrate/002_remove_columns_from_robots.rb
+sqlite3 db/golem_yard_development.sqlite3 < db/load_data.sql
