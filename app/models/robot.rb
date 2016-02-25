@@ -1,3 +1,5 @@
+require_relative 'sanitize'
+
 class Robot
   attr_reader :id,
               :name,
@@ -14,6 +16,15 @@ class Robot
     @department = data[:department].capitalize
     @avatar     = generate_avatar
   end
+
+  # def initialize(data)
+  #   @data       = Sanitize.new.strip_script(data)
+  #   @id         = data[:id]
+  #   @name       = Sanitize.new.strip_script(data[:name])
+  #   @city       = Sanitize.new.strip_script(data[:city])
+  #   @department = Sanitize.new.strip_script(data[:department].capitalize)
+  #   @avatar     = generate_avatar
+  # end
 
   def generate_avatar
     if city.length % 2 == 0  #generate randomness in images

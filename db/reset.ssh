@@ -1,5 +1,5 @@
 #! /bin/bash
-echo "running drop"
+echo "dropping db"
 ruby db/drop.rb
 echo "migration 1"
 ruby db/migrate/001_create_robots.rb
