@@ -18,7 +18,7 @@ class Robot
   end
 
   # def initialize(data)
-  #   @data       = Sanitize.new.strip_script(data)
+  #   @data       = data
   #   @id         = data[:id]
   #   @name       = Sanitize.new.strip_script(data[:name])
   #   @city       = Sanitize.new.strip_script(data[:city])
